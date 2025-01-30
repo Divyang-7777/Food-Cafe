@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Food Cafe</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        
+    </head>
+
+    <body>
+
+        <header>
+            <div class="main_header">
+                <div class="left" id="socMediaSec">
+                    <span> follow on: </span>
+                    <ul class="socialLinks">
+                        <li>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mid">
+                    <h1>food cafe</h1>
+                </div>
+                <div class="right">
+                    <span class="langIcon"><i class="fa-solid fa-earth-americas"></i></span>
+                    <select class="language">
+                        <option value="english">English</option>
+                        <option value="italian">Italian</option>
+                        <option value="french">French</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="polish">Polish</option>
+                    </select>
+                    <span class="login" onclick="loginshow()">Login</span>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <ul class="navList">
+                <li onclick="toggleDropdown('dropdown-1')">
+                    <a href="#">Home</a>
+                    <ul class="dropdown dropdown-1">
+                        <li><a href="#">home 1</a></li>
+                        <li><a href="#">home 2</a></li>
+                        <li><a href="#">home 3</a></li>
+                    </ul>
+                </li>
+                <li onclick="toggleDropdown('dropdown-2')">
+                    <a href="#">About Us</a>
+                    <ul class="dropdown dropdown-2">
+                        <li><a href="#">about 1</a></li>
+                        <li><a href="#">about 2</a></li>
+                        <li><a href="#">about 3</a></li>
+                    </ul>
+                </li>
+                <li onclick="toggleDropdown('dropdown-3')">
+                    <a href="#">Services</a>
+                    <ul class="dropdown dropdown-3">
+                        <li><a href="#">service 1</a></li>
+                        <li><a href="#">service 2</a></li>
+                        <li><a href="#">service 3</a></li>
+                    </ul>
+                </li>
+                <li onclick="toggleDropdown('dropdown-4')">
+                    <a href="#">Gallery</a>
+                    <ul class="dropdown dropdown-4">
+                        <li><a href="#">gallery 1</a></li>
+                        <li><a href="#">gallery 2</a></li>
+                        <li><a href="#">gallery 3</a></li>
+                    </ul>
+                </li>
+                <li onclick="toggleDropdown('dropdown-5')">
+                    <a href="#">Contact Us</a>
+                    <ul class="dropdown dropdown-5">
+                        <li><a href="#">contact 1</a></li>
+                        <li><a href="#">contact 2</a></li>
+                        <li><a href="#">contact 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <section class="imageSlider">
+            <div class="carousel">
+                
+                <div class="image-container">
+                    <img
+                        src="assets/banner-1.jpg"
+                        alt="food image"
+                        id="photo1"
+                        class="active"
+                        class="imhh"
+                    />
+                    <img
+                        src="assets/banner-2.jpg"
+                        alt="food image"
+                        id="photo2"
+                        class="imhh"
+                    />
+                    <img
+                        src="assets/banner-3.jpg"
+                        alt="food image"
+                        id="photo3"
+                        class="imhh"
+                    />
+                </div>
+                
+                    <button class="carouselButton prev" onclick="prev()" id="prev">&lt;</button>
+                    <button class="carouselButton next" onclick="next()" id="next">&gt;</button>
+                
+            </div>
+        </section>
+        <section class="services">
+            <div class="container">
+                <div class="allBtn">
+                    <button onclick="home()">Home</button>
+                    <button onclick="service()">Service</button>
+                    <button onclick="contact()">Contact</button>
+                </div>
+                <div class="servicesImg">
+                    <img src="assets/tab-1.jpg" alt="home Tab image" id="image5">
+                    <img src="assets/tab-2.jpg" alt="service Tab image" id="image6">
+                    <img src="assets/tab-3.jpg" alt="contact Tab image" id="image7">
+                </div>
+            </div>
+        </section>
+        <section class="foodMenu">
+            <div class="foodContainer">
+                <div class="foodBtn">
+                    <button onclick="coffee()">Coffee</button>
+                    <button onclick="drink()">Cold Drinks</button>
+                    <button onclick="fastfood()">Fast Food</button>
+                    <button onclick="tea()">Tea</button>
+                    <button onclick="all()">All</button>
+                </div>
+                <div class="imageContainer">
+                    <div class="table" id="box1">
+                        <div class="card1">
+                            <img src="assets/coffee-1.jpg" alt="coffee">
+                            <h4>Cappuccino</h4>
+                        </div>
+                        <div class="card1">
+                            <img src="assets/coffee-2.jpg" alt="coffee">
+                            <h4>Espresso</h4>
+                        </div>
+                        <div class="card1">
+                            <img src="assets/coffee-3.jpg" alt="coffee">
+                            <h4>Caffe Latte</h4>
+                        </div>
+                        <div class="card1">
+                            <img src="assets/coffee-4.jpg" alt="coffee">
+                            <h4>Cold brew</h4>
+                        </div>
+                    </div>
+                    <div class="table" id="box2">
+                        <div class="card1">
+                            <img src="assets/drink-1.jpg" alt="coffee">
+                            <h4>Sprite</h4>
+                        </div>
+                        <div class="card1">
+                            <img src="assets/drink-2.jpg" alt="coffee">
+                            <h4>Thums-Up</h4>
+                        </div>
+                        <div class="card1">
+                            <img src="assets/drink-3.jpg" alt="coffee">
+                            <h4>Pepsi</h4>
+                        </div>
+                        <div class="card1">
+                            <img src="assets/drink-4.jpg" alt="coffee">
+                            <h4>Mirinda</h4>
+                        </div>
+                    </div>
+                    <div class="table" id="box3">
+                        <div class="card1">
+                            <img src="assets/fast-1.avif" alt="coffee">
+                            <h4>Burger</h4>
+                        </div>
+                        <div class="card1">
+                            <img src="assets/fast-2.jpg" alt="coffee">
+                            <h4>Vada Pav</h4>
+                        </div>
+                        <div class="card1">
+                            <img src="assets/fast-3.jpg" alt="coffee">
+                            <h4>Pizza</h4>
+                        </div>
+                        <div class="card1">
+                            <img src="assets/fast-4.jpg" alt="coffee">
+                            <h4>Taco</h4>
+                        </div>
+                    </div>
+                    <div class="table" id="box4">
+                        <div class="card1">
+                            <img src="assets/tea-1.jpg" alt="coffee">
+                            <h4>Khada</h4>
+                        </div>
+                        <div class="card1">
+                            <img src="assets/tea-2.jpg" alt="coffee">
+                            <h4>Green Tea</h4>
+                        </div>
+                        <div class="card1">
+                            <img src="assets/tea-3.webp" alt="coffee">
+                            <h4>Lipton</h4>
+                        </div>
+                        <div class="card1">
+                            <img src="assets/tea-4.jpg" alt="coffee">
+                            <h4>Black Tea</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="contact">
+            <div class="contactCont">
+                <h2>Get in touch</h2>
+                <form class="contactForm" onsubmit="return validateForm()">
+                    <div class="newcell">
+                        <div class="cell nameCell">
+                            <input type="text" placeholder="Name" name="name" id="name">
+                            <div id="error1"></div>
+                        </div>
+                        <div class="cell emailCell">
+                            <input type="text" placeholder="E-Mail" id="email">
+                            <div id="error2"></div>
+                        </div>
+                    </div>
+                    <div class="cell passCell">
+                        <input type="password" placeholder="Password" id="password">
+                        <div id="error3"></div>
+                    </div>
+                    <div class="cell messageCell">
+                        <textarea name="discription" id="description" placeholder="Your Message"></textarea>
+                    </div>
+                    <div class="submitCell">
+                        <input type="submit" value="Submit" class="cellSubmitBtn">
+                    </div>
+                </form>
+            </div>
+        </section>
+    
+        <footer>
+            <div class="footerContainer">
+                <button>our story</button>
+                <button>mission</button>
+                <button>vision</button>
+            </div>
+        </footer>
+    
+        <div class="form">
+            <div class="formContent">
+            <h1>Login</h1>
+            <div class="closeIcon" onclick="hide()">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <form>
+                <div class="name part-1">
+                <input type="text" id="loginName" placeholder="Name" required>
+                </div>
+                <div class="pass part-1">
+                    <input type="password" id="loginPassword"placeholder="password" required>
+                </div>
+                <span class="err" id="loginError"></span>
+                
+                <input type="submit" id="btn">
+            </form>
+        </div>
+    </div>
+    
+    </body>
+    <script src="script.js"></script>   
+    <script></script>
+</html>
